@@ -23,3 +23,5 @@ EOF
 echo "Create release $version for repo: $repo_full_name branch: $branch"
 curl -v  -H "Authorization: token $token" --data "$(generate_post_data)" "https://api.github.com/repos/$repo_full_name/releases"
 
+# curl https://api.github.com/repos/evgen66rus/git_release/releases |jq -r '.[0].tag_name'
+
